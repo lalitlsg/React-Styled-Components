@@ -16,9 +16,10 @@ export const Wrapper = styled.div`
   grid-auto-rows: minmax(100px, auto);
   gap: 10px;
 
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 500px) {
     grid-template-areas:
       "header header header header"
+      ". . . ."
       "menu menu menu menu"
       "aside aside aside aside"
       "main main main main "
@@ -28,6 +29,8 @@ export const Wrapper = styled.div`
 
 export const HeaderItem = styled.header`
   grid-area: header;
+  position: fixed;
+  width: 100%;
 `;
 
 export const MenuItem = styled.menu`
@@ -39,7 +42,7 @@ export const AsideItem = styled.aside`
   grid-area: aside;
   border-right: 1px solid;
   min-height: 200px;
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 500px) {
     border-right: none;
     border-bottom: 1px solid;
   }

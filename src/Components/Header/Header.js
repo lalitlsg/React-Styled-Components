@@ -7,8 +7,9 @@ const Appbar = styled.section`
   text-align: center;
   justify-content: space-between;
   background-color: #5051c9;
+
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 500px) {
     flex-direction: column;
   }
 `;
@@ -43,7 +44,7 @@ const ThemeProfile = styled.section`
   justify-content: flex-end;
   align-items: center;
 
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 500px) {
     justify-content: center;
   }
 `;
