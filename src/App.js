@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import {
+  Wrapper,
+  HeaderItem,
+  MainItem,
+  AsideItem,
+  MenuItem,
+  FooterItem
+} from "./StyledComponents/Layout";
+import Header from "./Components/Header/Header";
+import Menu from "./Components/Menu/Menu";
+import Aside from "./Components/Aside/Aside";
+import Main from "./Components/Main/Main";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
+  const [dark, setDark] = useState(false);
+  const changeToDark = () => setDark(!dark);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper dark={dark}>
+      <HeaderItem>
+        <Header clickHandler={changeToDark} />
+      </HeaderItem>
+      <MenuItem>
+        <Menu />
+      </MenuItem>
+      <AsideItem>
+        <Aside />
+      </AsideItem>
+      <MainItem>
+        <Main />
+      </MainItem>
+      <FooterItem>
+        <Footer />
+      </FooterItem>
+    </Wrapper>
   );
 }
 
